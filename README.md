@@ -4,7 +4,7 @@
 #说明：该组件提供search对象和change、click方法
 ```bash
 
-搜索对象有5个属性：
+search对象有5个属性：
 
 selectItems	   下拉菜单	              （Array） 
 
