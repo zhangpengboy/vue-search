@@ -8,7 +8,7 @@ search对象有5个属性：
 
 * selectItems	   下拉菜单	              （Array，默认为[]） 
 
-* searchValue	   搜索框内容的值	      （String,默认为''）
+* searchValue	   搜索框内容的值	      （String，默认为''）
 
 * placeholder	   搜索框提示文本	     （String,默认为''） 
 
