@@ -19,7 +19,7 @@ search对象有5个属性：
 
 
 ### 引入：在main.js文件中
-```bash
+```JavaScript
 
 import VueSearch from './components/vue-search/index'
 
