@@ -1,7 +1,7 @@
 vue-search
 ----
 
-说明：该组件提供search对象和change、click方法
+###说明：该组件提供search对象和change、click方法
 ```bash
 
 search对象有5个属性：
@@ -18,7 +18,7 @@ clearable	  是否添加清空搜索框内容	    （Boolean）
 ```
 
 
-引入：在main.js文件中
+###引入：在main.js文件中
 ```bash
 
 import VueSearch from './components/vue-search/index'
@@ -26,7 +26,7 @@ import VueSearch from './components/vue-search/index'
 Vue.use(VueSearch)
 ```
 
-使用示例：（\vue_search\src\dev\DevSearch.vue）
+###使用示例：（\vue_search\src\dev\DevSearch.vue）
 ```bash
 <template>
     <div>
