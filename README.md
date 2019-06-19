@@ -82,14 +82,12 @@ Vue.use(VueSearch)
         }
       },
       searchOK(value){
+        //qiang
         alert('查询条件:' + this.search.type + ' ; ' +'输入内容:' + value)
       }
     },
   }
 </script>
 
-<style scoped>
-
-</style>
 
 ```
