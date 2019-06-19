@@ -82,7 +82,7 @@ Vue.use(VueSearch)
         }
       },
       searchOK(value){
-        //qiang
+        //请求函数
         alert('查询条件:' + this.search.type + ' ; ' +'输入内容:' + value)
       }
     },
