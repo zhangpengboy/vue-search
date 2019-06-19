@@ -24,5 +24,5 @@ import VueSearch from './components/vue-search/index'
 Vue.use(VueSearch)
 
 
-使用示例：（DevSearch.vue）
+使用示例：（\vue_search\src\dev\DevSearch.vue）
 
