@@ -16,9 +16,10 @@ type	          下拉菜单选中项的值	     （String）
 
 clearable	  是否添加清空搜索框内容	    （Boolean） 
 ```
-```bash
+
 
 引入：在main.js文件中
+```bash
 
 import VueSearch from './components/vue-search/index'
 
