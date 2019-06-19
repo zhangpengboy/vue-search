@@ -14,7 +14,7 @@ search对象有5个属性：
 
 * type	          下拉菜单选中项的值	     （String,默认为''） 
 
-* clearable	  是否添加清空搜索框内容	    （Boolean,默认为'） 
+* clearable	  是否添加清空搜索框内容	    （Boolean,默认为true） 
 ```
 
 ### 下载
