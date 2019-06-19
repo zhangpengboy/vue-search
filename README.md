@@ -29,12 +29,10 @@ Vue.use(VueSearch)
 ```bash
 <template>
     <div>
-      <h2>测试</h2>
-      <VueSearch :search="search" @change="changeType" @click="searchOK"></VueSearch>示例
+      <VueSearch :search="search" @change="changeType" @click="searchOK"></VueSearch>
     </div>
 </template>
-```bash
-##
+
 <script>
   export default {
     name: 'DevSearch',
