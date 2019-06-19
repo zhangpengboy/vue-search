@@ -17,11 +17,12 @@ search对象有5个属性：
 * clearable	  是否添加清空搜索框内容	    （Boolean） 
 ```
 
+###
 
 ### 引入：在main.js文件中
 ```JavaScript
 
-import VueSearch from './components/vue-search/index'
+import VueSearch from 'dl_search'
 
 Vue.use(VueSearch)
 ```
