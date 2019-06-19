@@ -26,4 +26,6 @@ Vue.use(VueSearch)
 ```
 
 使用示例：（\vue_search\src\dev\DevSearch.vue）
-
+```bash
+aa
+```
