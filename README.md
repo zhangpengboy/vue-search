@@ -1,7 +1,7 @@
 vue-search
 ----
 
-### 说明：该组件基于element-ui提供search对象和change、click方法
+### 说明：该组件基于element-ui库j提供search对象和change、click方法
 ```bash
 
 search对象有5个属性：
