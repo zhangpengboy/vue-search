@@ -17,7 +17,11 @@ search对象有5个属性：
 * clearable	  是否添加清空搜索框内容	    （Boolean） 
 ```
 
-###
+### 下载
+```javascript
+npm install dl_search --save
+```
+
 
 ### 引入：在main.js文件中
 ```JavaScript
