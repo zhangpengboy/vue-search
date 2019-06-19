@@ -6,15 +6,15 @@ vue-search
 
 search对象有5个属性：
 
-selectItems	   下拉菜单	              （Array） 
+*selectItems	   下拉菜单	              （Array） 
 
-searchValue	   搜索框内容的值	      （String）
+*searchValue	   搜索框内容的值	      （String）
 
-placeholder	   搜索框提示文本	     （String） 
+*placeholder	   搜索框提示文本	     （String） 
 
-type	          下拉菜单选中项的值	     （String） 
+*type	          下拉菜单选中项的值	     （String） 
 
-clearable	  是否添加清空搜索框内容	    （Boolean） 
+*clearable	  是否添加清空搜索框内容	    （Boolean） 
 ```
 
 
