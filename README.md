@@ -6,7 +6,7 @@ vue-search
 
 search对象有5个属性：
 
-* selectItems	   下拉菜单	              （Array） 
+* selectItems	   下拉菜单	              （Array，默认为[]） 
 
 * searchValue	   搜索框内容的值	      （String）
 
