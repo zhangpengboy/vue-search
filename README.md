@@ -1,7 +1,7 @@
 vue-search
 ----
 
-### 说明：该组件基于element-ui库进行二次封装，提供search对象和change、click方法
+### 说明：该组件基于element-ui库进行二次封装，提供search对象和change、click、enter方法
 ```bash
 
 search对象有5个属性：
@@ -49,9 +49,9 @@ Vue.use(VueSearch)
         search:{
           selectItems:[],//下拉菜单
           searchValue:'',//搜索框内容的值
-          // placeholder:'请输入内容',//搜索框提示文本
+          placeholder:'请输入内容',//搜索框提示文本
           type:'',//下拉菜单选中项的值
-          // clearable: true,//是否添加清空搜索框内容
+          clearable: true,//是否添加清空搜索框内容
         }
       }
     },
