@@ -8,25 +8,33 @@ search对象有5个属性：
 
 * selectItems	   下拉菜单	              （Array，默认为[]） 
 
-* searchValue	   搜索框内容的值	      （String，默认为''）
+* searchValue	   搜索框内容的值	       （String，默认为''）
 
-* placeholder	   搜索框提示文本	     （String，默认为''） 
+* placeholder	   搜索框提示文本	       （String，默认为''） 
 
 * type	          下拉菜单选中项的值	     （String，默认为''） 
 
-* clearable	  是否添加清空搜索框内容	    （Boolean，默认为true） 
+* clearable	   是否添加清空搜索框内容	    （Boolean，默认为true） 
+
+三个方法：
+
+* change      下拉菜单点击事件            funaction（newType）
+
+* click       按钮点击事件                funaction（value）
+
+* enter       enter键盘事件              funaction（[value]）
 ```
 
 ### 下载
 ```javascript
-npm install dl_search --save
+npm install dl_searchs --save
 ```
 
 
 ### 引入：在main.js文件中
 ```JavaScript
 
-import VueSearch from 'dl_search'
+import VueSearch from 'dl_searchs'
 
 Vue.use(VueSearch)
 ```
@@ -36,7 +44,7 @@ Vue.use(VueSearch)
 ```JavaScript
 <template>
     <div>
-      <VueSearch :search="search" @change="changeType" @click="searchOK"></VueSearch>
+      <VueSearch :search="search" @change="changeType" @click="searchOK" @enter="submit" style="margin-left:30%;"></VueSearch>
     </div>
 </template>
 
@@ -76,7 +84,6 @@ Vue.use(VueSearch)
         ]
       },
       changeType(newType){
-        console.log(newType)
         if(newType === '根据名称' ){
           this.search.type = '根据名称'
           this.search.placeholder = '请输入名称'
@@ -89,9 +96,14 @@ Vue.use(VueSearch)
         }
       },
       searchOK(value){
-        //请求函数
+        //按钮点击发送请求
         alert('查询条件:' + this.search.type + ' ; ' +'输入内容:' + value)
-      }
+      },
+      submit(value){
+        //enter键发请求
+        // this.searchOK(this.search.searchValue)
+        alert('查询条件:' + this.search.type + ' ; ' +'输入内容:' + value)
+      },
     },
   }
 </script>
