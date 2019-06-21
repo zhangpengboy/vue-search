@@ -6,23 +6,23 @@ vue-search
 
 search对象有5个属性：
 
-* selectItems	   下拉菜单	              （Array，默认为[]，必选） 
+* selectItems	   下拉菜单	                   （Array，默认为[]，必选） 
 
-* searchValue	   搜索框内容的值	       （String，默认为''，必选）
+* searchValue	   搜索框内容的值	            （String，默认为''，必选）
 
-* placeholder	   搜索框提示文本	       （String，默认为''） 
+* placeholder	   搜索框提示文本	            （String，默认为''） 
 
-* type	          下拉菜单选中项的值	     （String，默认为''，必选） 
+* type	          下拉菜单选中项的值	          （String，默认为''，必选） 
 
-* clearable	   是否添加清空搜索框内容	    （Boolean，默认为true） 
+* clearable	     是否添加清空搜索框内容	     （Boolean，默认为true） 
 
 三个方法：
 
-* change      下拉菜单点击事件            funaction（newType）
+* change      下拉菜单值改变时触发            funaction（newType）
 
-* click       按钮点击事件                funaction（value）
+* click       按钮点击时触发                 funaction（value）
 
-* enter       enter键盘事件              funaction（[value]）
+* enter       enter键触发                   funaction（[value]）
 ```
 
 ### 下载
