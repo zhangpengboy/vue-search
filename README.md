@@ -6,13 +6,13 @@ vue-search
 
 search对象有5个属性：
 
-* selectItems	   下拉菜单	              （Array，默认为[]） 
+* selectItems	   下拉菜单	              （Array，默认为[]，必选） 
 
-* searchValue	   搜索框内容的值	       （String，默认为''）
+* searchValue	   搜索框内容的值	       （String，默认为''，必选）
 
 * placeholder	   搜索框提示文本	       （String，默认为''） 
 
-* type	          下拉菜单选中项的值	     （String，默认为''） 
+* type	          下拉菜单选中项的值	     （String，默认为''，必选） 
 
 * clearable	   是否添加清空搜索框内容	    （Boolean，默认为true） 
 
@@ -27,7 +27,7 @@ search对象有5个属性：
 
 ### 下载
 ```javascript
-npm install dl_searchs --save
+npm i dl_searchs --s
 ```
 
 
