@@ -14,7 +14,11 @@ search对象有5个属性：
 
 * type	          下拉菜单选中项的值	          （String，默认为''，必选） 
 
-* clearable	     是否添加清空搜索框内容	     （Boolean，默认为true） 
+* clearable	     是否添加清空搜索框内容	     （Boolean，默认为true）
+
+* selectClass	     下拉菜单的样式	        （Object）
+
+* inputClass	     输入框的样式	             （Object）
 
 三个方法：
 
