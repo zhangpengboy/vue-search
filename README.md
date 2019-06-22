@@ -59,7 +59,13 @@ Vue.use(VueSearch)
           searchValue:'',//搜索框内容的值
           placeholder:'请输入内容',//搜索框提示文本
           type:'',//下拉菜单选中项的值
-          clearable: true,//是否添加清空搜索框内容
+          clearable: true,//是否添加清空搜索框内容,
+          selectClass: {    //下拉菜单的样式
+            width:'100px ',
+          },
+          inputClass: {     //输入框的样式
+            width:'250px'
+          }
         }
       }
     },
@@ -71,26 +77,26 @@ Vue.use(VueSearch)
       setSelectItems(){
         this.search.selectItems = [
           {
-            value: '所有',
-            label: 'all'
+            value: 'all',
+            label: '所有'
           },
           {
-            value: '根据名称',
-            label: 'name'
+            value: 'name',
+            label: '根据名称'
           }, {
-            value: '根据ID',
-            label: 'ID'
+            value: 'ID',
+            label: '根据ID'
           }
         ]
       },
-      changeType(newType){
-        if(newType === '根据名称' ){
+      changeType(vlaue){
+        if(vlaue === 'name' ){
           this.search.type = '根据名称'
           this.search.placeholder = '请输入名称'
-        }else if(newType === '根据ID' ){
+        }else if(vlaue === 'ID' ){
           this.search.type = '根据ID'
           this.search.placeholder = '请输入ID'
-        }else if(newType === '所有' ){
+        }else if(vlaue === 'all' ){
           this.search.type = '所有'
           this.search.placeholder = '请输入内容'
         }
