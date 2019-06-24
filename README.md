@@ -82,7 +82,7 @@ Vue.use(VueSearch)
           type:'',//下拉菜单选中项的值
           clearable: true,//是否添加清空搜索框内容,
           selectClass: {    //下拉菜单的样式
-            width:'100px ',
+            width:'120px ',
           },
           inputClass: {     //输入框的样式
             width:'250px'
@@ -149,7 +149,7 @@ Vue.use(VueSearch)
           this.search.placeholder = '请输入资源代码'
         }else if(vlaue === 'name' ){
           this.search.type = '资源名称'
-          this.search.placeholder = '请输入内容'
+          this.search.placeholder = '请输入资源名称'
         }else if(vlaue === 'content' ){
           this.search.type = '资源内容'
           this.search.placeholder = '请输入资源内容'
