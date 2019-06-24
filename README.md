@@ -1,7 +1,7 @@
-vue-search
+search
 ----
 
-### 说明：该组件基于element-ui库进行二次封装，提供search对象和change、click、enter方法
+### 说明：该组件基于element-ui库进行二次封装，提供search对象和change、click、enter方法，两个slot的插槽
 ```bash
 
 search对象有5个属性：
@@ -27,6 +27,11 @@ search对象有5个属性：
 * click       按钮点击时触发                 funaction（value）
 
 * enter       enter键触发                   funaction（[value]）
+
+slot：
+
+* <slot name="select"></slot>
+* <slot name="more"></slot>
 ```
 
 ### 下载
@@ -48,7 +53,19 @@ Vue.use(VueSearch)
 ```JavaScript
 <template>
     <div>
-      <VueSearch :search="search" @change="changeType" @click="searchOK" @enter="submit" style="margin-left:30%;"></VueSearch>
+      <VueSearch :search="search" @change="changeType" @click="searchOK" @enter="submit" style="margin-left:30%;">
+        <div slot="more" style="margin-left:50px;width:120px;">
+          <el-select  v-model="typeOne" @change="changeTypeOne" >
+            <el-option
+              v-for="item in selectItemsOne"
+              :key="item.value"
+              :lable="item.label"
+              :value="item.value">
+              {{item.label}}
+            </el-option>
+          </el-select>
+        </div>
+      </VueSearch>
     </div>
 </template>
 
@@ -70,44 +87,87 @@ Vue.use(VueSearch)
           inputClass: {     //输入框的样式
             width:'250px'
           }
-        }
+        },
+        typeOne:'',
+        selectItemsOne:[
+          {
+            value: 'eq',
+            label: '相等'
+          },
+        ],
       }
     },
     created(){
       this.setSelectItems()
-      this.search.type = '所有'
+      this.setSelectItemsOne()
+      this.search.type = '条件1'
+      this.typeOne = '更多查询'
     },
     methods:{
       setSelectItems(){
         this.search.selectItems = [
           {
-            value: 'all',
-            label: '所有'
+            value: 'id',
+            label: 'id'
+          },
+          {
+            value: 'code',
+            label: '资源代码'
           },
           {
             value: 'name',
-            label: '根据名称'
+            label: '资源名称'
+          },
+          {
+            value: 'content',
+            label: '资源内容'
+          }
+        ]
+      },
+      setSelectItemsOne(){
+        this.selectItemsOne = [
+          {
+            value: 'eq',
+            label: '相等'
+          },
+          {
+            value: 'lt',
+            label: '小于'
           }, {
-            value: 'ID',
-            label: '根据ID'
+            value: 'gt',
+            label: '大于'
           }
         ]
       },
       changeType(vlaue){
-        if(vlaue === 'name' ){
-          this.search.type = '根据名称'
-          this.search.placeholder = '请输入名称'
-        }else if(vlaue === 'ID' ){
-          this.search.type = '根据ID'
-          this.search.placeholder = '请输入ID'
-        }else if(vlaue === 'all' ){
-          this.search.type = '所有'
+        console.log(vlaue)
+        if(vlaue === 'id' ){
+          this.search.type = 'id'
+          this.search.placeholder = '请输入id'
+        }else if(vlaue === 'code' ){
+          this.search.type = '资源代码'
+          this.search.placeholder = '请输入资源代码'
+        }else if(vlaue === 'name' ){
+          this.search.type = '资源名称'
           this.search.placeholder = '请输入内容'
+        }else if(vlaue === 'content' ){
+          this.search.type = '资源内容'
+          this.search.placeholder = '请输入资源内容'
+        }
+      },
+      changeTypeOne(vlaue){
+        console.log(vlaue)
+        if(vlaue === 'eq' ){
+          this.typeOne = '相等'
+        }else if(vlaue === 'lt' ){
+          this.typeOne = '小于'
+        }else if(vlaue === 'gt' ){
+          this.typeOne = '大于'
         }
       },
       searchOK(value){
         //按钮点击发送请求
-        alert('查询条件:' + this.search.type + ' ; ' +'输入内容:' + value)
+       alert('查询条件1:' + this.search.type + ' ; '+'查询条件2：'+this.typeOne+ ' ; ' +'输入内容:' + value)
       },
       submit(value){
         //enter键发请求
